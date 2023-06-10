@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .title {
+    @apply text-2xl font-semibold text-white font-serif
+  }
+  .semi-title {
+    @apply text-white font-medium text-xl
+  }
+  .card {
+    @apply bg-white border border-zinc-100 rounded p-20 
+  }
+  .btn-primary {
+    @apply h-10 bg-secondary hover:bg-primary rounded-md px-2.5 py-1 text-white font-semibold text-sm transition-all ease-in-out
+  }
+  .btn-secondary {
+    @apply h-10 bg-primary hover:bg-secondary rounded-md px-2.5 py-1 text-white font-semibold text-sm transition-all ease-in-out
+  }
+  .btn-icon {
+    @apply mt-1 p-1 hover:bg-gray-400/20 rounded-full text-gray-500 hover:text-gray-400 transition-all
+  }
+  .login-input {
+    @apply h-10 outline-none border border-zinc-300 focus-within:border-secondary rounded-md px-2 transition-all ease-in
+  }
+  .aside {
+    @apply col-span-2 border-r border-gray-700 hidden md:block
+  }
+  .date {
+    @apply mt-auto text-xs text-[#FFFFFF99]
+  }
+  .avatar {
+    @apply h-12 w-12 overflow-hidden rounded-full border border-white
+  }
+}
+
+@layer base {
+  html, body {
+    font-family: 'Lato';
+  }
+}
