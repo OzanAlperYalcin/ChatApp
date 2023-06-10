@@ -17,7 +17,7 @@ function Messages({ data, messages, setMessages, socket }) {
   return (
     <div className='grid col-span-6 md:col-span-4'>
       <div className="mt-auto">
-        <div className="flex flex-col gap-2 h-[calc(100vh-136px)] py-2 px-14 overflow-auto">
+        <div className="flex flex-col justify-end gap-2 h-[calc(100vh-136px)] py-2 px-14 overflow-auto">
           {messages.map((message, i) => (
             <Message key={i} username={data.name} message={message} />
           ))}
