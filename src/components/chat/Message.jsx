@@ -6,7 +6,7 @@ function Message({ username, message }) {
         <div className={`flex ${username === message.name ? 'justify-end' : 'justify-start'}`}>
             <div className={`flex gap-2 p-2 rounded-md relative ${username === message.name ? 'bg-[#176b5b] rounded-tr-none' : 'bg-third rounded-tl-none'}`}>
                 <div>
-                    {username !== message.name && <p className="text-orange-500 text-xs font-semibold">{username}</p>}
+                    {username !== message.name && <p className="text-orange-500 text-xs font-semibold">{message.name}</p>}
                     <p className='text-white font-medium text-sm pb-1'>{message.message}</p>
                 </div>
                 <span className="date">{moment(message.date).format('HH:mm')}</span>

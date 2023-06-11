@@ -17,7 +17,7 @@ function Entrance() {
     }
     
     return (
-        <div className="w-2/4 mx-auto border border-zinc-300 rounded-xl bg-white drop-shadow-lg">
+        <div className="w-3/4 md:w-2/4 mx-auto border border-zinc-300 rounded-xl bg-white drop-shadow-lg">
             <form onSubmit={(e) => handleSubmit(e)} className="grid gap-2 p-10">
                 <h2 className="font-semibold text-sm text-center"> Giriş Bilgileriniz </h2>
                 <input 

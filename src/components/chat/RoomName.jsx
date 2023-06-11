@@ -1,24 +1,25 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { io } from 'socket.io-client'
 function RoomName({ status, setStatus, data }) {
 
   const [name, setName] = useState(data.name)
-
-  const socket = io(import.meta.env.VITE_SOCKET, {
-    reconnectionDelayMax: 10000
-  })
-
-  useEffect(() => {
-    return () => {
-      socket.disconnect()
-    }
-  }, [socket])
+  const socket = useRef(null)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    socket.emit('room', { name, roomId: data.roomId })
+    socket.current.emit('room', { name, roomId: data.roomId })
     setStatus(false)
   }
+  
+  useEffect(() => {
+    socket.current = io(import.meta.env.VITE_SOCKET, {
+      reconnectionDelayMax: 10000
+    })
+    return () => {
+      socket.current.disconnect()
+    }
+  }, [handleSubmit])
+
   
   const handleClick = () => {
     setName(data.name)

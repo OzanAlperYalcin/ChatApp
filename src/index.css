@@ -11,7 +11,7 @@
     @apply text-white font-medium text-xl
   }
   .card {
-    @apply bg-white border border-zinc-100 rounded p-20 
+    @apply bg-white border border-zinc-100 rounded-lg p-5 md:p-20 mx-5 md:mx-0
   }
   .btn-primary {
     @apply h-10 bg-secondary hover:bg-primary rounded-md px-2.5 py-1 text-white font-semibold text-sm transition-all ease-in-out
