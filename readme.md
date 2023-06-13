@@ -1,5 +1,5 @@
-# Pokedex
-A simple project with a whatsapp look that you can switch between rooms.
+# ChatApp
+A simple project with a whatsapp looking that you can switch between rooms.
 
 ## Techs:
 
@@ -11,9 +11,16 @@ A simple project with a whatsapp look that you can switch between rooms.
 - Custom Hooks
 - Tailwind
 
+#### Backend:
+
+- node.js
+- Express
+- Socket.io
+
 ### DEMO 🔴
 
 Client: https://chat-appdemo.netlify.app/
+API: https://api.alperyalcin.com.tr
 
 ## Install:
 
@@ -21,10 +28,4 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/ozanalperyalcin/ChatApp.git
-```
-
-Install dependencies:
-
-```bash
-cd chatapp && npm i
 ```
